@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container-1 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-image: url("https://i.pinimg.com/564x/0d/4a/4b/0d4a4bcfc1c257e1e3816cfabc6d26ef.jpg");
+    background-size: cover;
+}
+
+.timer-interface {
+    height: 500px;
+    width: 500px;
+    background-color: rgba(39, 39, 39, 0.8);
+    box-shadow: 0px 0px 20px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: relative;
+}
+
+.counter-interface {
+    height: 500px;
+    width: 500px;
+    background-color: rgba(39, 39, 39, 0.8);
+    box-shadow: 0px 0px 20px white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: relative;
+}
+
+
+.time-set {
+    height: 60px;
+    width: 300px;
+    border: solid 5px #272727;
+    display: flex;
+    padding: 3px;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #272727;
+    box-shadow: 0px 0px 50px #E5E3E1;
+}
+
+.slide {
+    font-family: "Roboto";
+    color: white;
+    width: calc(100%/3);
+    height: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    border: solid 3px #272727;
+    border-radius: 20px;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide:hover {
+    font-size: 50px;
+}
+
+.buttons {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+}
+
+@keyframes click {
+    to {
+        transform: translatey(var(--move));
+    }
+}
+
+.start {
+    position: absolute;
+    bottom: 80px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #FFAE00;
+    box-shadow: -3px -3px 15px -5px #E5E3E1;
+}
+
+.start:hover {
+    scale: 1.2;
+}
+
+
+#t-1 {
+    box-shadow: 0px -4px 5px -4px #E5E3E1;
+}
+
+#t-1:hover {
+    scale: 1.2;
+}
+
+#t-1:active {
+    box-shadow: none;
+    scale: 1;
+}
+
+#t-2 {
+    box-shadow: 0px 4px 5px -4px #E5E3E1;
+}
+
+#t-2:hover {
+    scale: 1.2;
+}
+
+#t-2:active {
+    box-shadow: none;
+    scale: 1;
+}
+
+.start i {
+    position: relative;
+    top: 1px;
+    font-size: 30px;
+}
+
+.clock-interface {
+    transform: rotate(-90deg);
+    position: relative;
+    bottom: 30px;
+    /* border:solid white; */
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 0px white;
+}
+
+.clock {
+    stroke: #FFAE00;
+    stroke-width: 10px;
+    stroke-dasharray: 629px;
+    fill: #272727;
+    /* transition:1s linear; */
+}
+
+.display-count {
+    --side: 190px;
+    position: absolute;
+    top: 124.5px;
+    width: var(--side);
+    height: var(--side);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: "Roboto";
+    font-weight: 900;
+    color: #FFAE00;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 0px white inset;
+}
+
+@keyframes blink {
+    50% {
+        scale: 1.2;
+    }
+}
+
+.holder {
+    display: flex;
+    justify-content: center;
+}
+
+.blink_blink {
+    animation: blink 1s ease-in infinite;
+}
+
+.heading {
+    position: absolute;
+    font-size: 20px;
+    top: 30px;
+}
+
+
+.play {
+    display: inline;
+    position: relative;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #FFAE00;
+}
+
+.play i {
+    position: relative;
+    left: 2px;
+    font-size: 30px;
+}
+
+.play:hover {
+    scale: 1.2;
+}
+
+.play:active {
+    box-shadow: none;
+    scale: 1;
+}
+
+.pause {
+    display: none;
+    position: relative;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #FFAE00;
+}
+
+.pause i {
+    position: relative;
+    font-size: 30px;
+}
+
+.pause:hover {
+    scale: 1.2;
+}
+
+.pause:active {
+    box-shadow: none;
+    scale: 1;
+}
+
+.wrong {
+    position: relative;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #FFAE00;
+}
+
+.wrong i {
+    position: relative;
+    font-size: 30px;
+}
+
+.wrong:hover {
+    scale: 1.2;
+}
+
+.placer {
+    position: absolute;
+    width: 120px;
+    bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+}
