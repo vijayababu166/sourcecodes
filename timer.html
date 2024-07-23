@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/25409945dd.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="timer.css">
+</head>
+<body>
+    <div class="container-1">
+        <div class="timer-interface" id="timerInterface">
+            <button id="t-1" class="buttons">
+                <svg height="50" width="50">
+                    <polygon class="trigger" points="25,10 10,40 40,40" stroke="#FFAE00" stroke-width="5px" />
+                </svg>
+            </button>
+            <div id="timeSet" class="time-set">
+                <div id="hourSet" class="slide">HH</div>
+                <div id="minSet" class="slide">MM</div>
+                <div id="secSet" class="slide">SS</div>
+            </div>
+            <button id="t-2" class="buttons">
+                <svg height="50" width="50">
+                    <polygon class="trigger" points="25,40 10,10 40,10" stroke="#FFAE00" stroke-width="5px" />
+                </svg>
+            </button>
+            <button class="start" id="start"><i class="fa-solid fa-power-off"></i></button>
+        </div>
+        <div class="counter-interface" id="counterInterface">
+            <svg class="clock-interface" height="210px" width="210px">
+                <circle id="clock" class="clock" cx="105.2px" cy="105.2px" r="100px" />
+            </svg>
+            <div class="display-count">
+                <h1 class="heading">Timer</h1>
+                <div class="holder" id="holder">
+                    <p id="hourCount">00 </p>
+                    <span>:</span>
+                    <p id="minCount">00</p>
+                    <span>:</span>
+                    <p id="secCount">00</p>
+                </div>
+            </div>
+            <div class="placer">
+                <button class="play" id="play"><i class="fa-solid fa-play"></i></button>
+                <button class="pause" id="pause"><i class="fa-solid fa-pause"></i></button>
+                <button class="wrong" id="wrong"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+    </div>
+<script src="timer.js"></script>
+</body>
+</html>
